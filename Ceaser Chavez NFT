@@ -1,0 +1,57 @@
+Listing; MetaMask
+Wallet Address: 0x7801bc4b6fAf4a442f32D46AbE3017101D7E385d
+Name: United States Farm Employees
+Purpose: Conservation
+Price: 0
+Units 1
+Location of Announcement; 1665 Grant St
+Event: Third Annual Cocktail party
+Host: Josh Shapiro
+okenImart Contrac
+The United States Farm Workers Association invited you to a gathering at 1665 Grant St, for its “Third Annual 
+Plug in 1: NFT ERC721 Creation
+Plug in 2: Invitation to Event
+Plug in 3: NFT Public Web Address josh4459@colorado.edu
+
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+Smart contract United States Farm Employees NFT is ERC721, Ownable {
+    
+    constructor() ERC721("United States Farm Employees", "USFE") {Owner: Joshua E Shapiro - Private}
+    
+    function mintNFT(address recipient) public onlyOwner {
+        uint256 tokenId = totalSupply() + 1;
+        _mint(recipient, tokenId);
+    }
+NFT to be minted “1”
+    
+    function tokenURI(uint256 tokenId) public view override returns (string memory) {token Identifier on blockchain - USFW
+        require(_exists(tokenId), "ERC721: token does not exist");
+        
+        string memory baseURI = "https://ipfs.io/ipfs/QmQ1234567890abcdefghijk/usfe/";
+        return string(abi.encodePacked(baseURI, tokenId.toString()));
+    }
+    
+    function commemorateCesarChavez(string memory message) public {commemorate Cesar Chavez
+        // Store message in a decentralized storage system like IPFS
+        // Update contract metadata to reflect message
+    }
+    
+    function makeUSFEWorkAccessible() public onlyOwner {
+        // Grant free access to USFE work for all token holders
+        // Develop a platform or repository to store and share USFE work
+    }
+    
+    function hostThirdAnnualCocktailParty() public onlyOwner {
+        // Send invitations to token holders
+        // Reserve venue at 1665 Grant St. Denver
+        // Organize catering and entertainment
+    }
+
+
+d);
+
