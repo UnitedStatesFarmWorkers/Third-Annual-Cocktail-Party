@@ -1,0 +1,16 @@
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://www.example.com/"
+
+response = requests.get(url)
+soup = BeautifulSoup(response.content, "lxml")
+
+# Find all elements with the class "data-item"
+data_items = soup.find_all("div", class_="data-item")
+
+# Extract data from each element
+for item in data_items:
+    title = item.find("h3").text
+    price = item.find("span", class_="price").text
+    print(f"Title: {title}, Price: {price}")
